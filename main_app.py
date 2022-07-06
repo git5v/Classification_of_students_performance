@@ -306,7 +306,6 @@ import seaborn as sns
 if st.button('Click if you wants to know hte analysis of studemnts'):
        st.title('Here the analysis of student')
 
-       import matplotlib.pyplot as plt
        #Bar Chart
        st.bar_chart(student['raisedhands'][50:100:])
        st.write('Avarage Raised Hands of students',student['raisedhands'].mean())
