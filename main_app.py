@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd 
 
 from PIL import Image
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 from sklearn.ensemble import RandomForestClassifier
@@ -73,9 +73,25 @@ X = student[['gender', 'NationalITy', 'PlaceofBirth', 'StageID', 'Semester',
 
 
 
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=0.7,random_state=0)
+# X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=0.7,random_state=0)
+
+
+def shuffle_split_data(X, y):
+    arr_rand = np.random.rand(X.shape[0])
+    split = arr_rand < np.percentile(arr_rand, 70)
+
+    X_train = X[split]
+    X_test =  X[~split]
+    y_train = y[split]
+    y_test = y[~split]
+
+#     print len(X_Train), len(y_Train), len(X_Test), len(y_Test)
+    return X_train, X_test, y_train, y_test
+
+X_train,X_test,y_train,y_test = shuffle_split_data(X, y)
+
 
 from sklearn.ensemble import RandomForestClassifier
 
