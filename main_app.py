@@ -3,6 +3,7 @@ from curses.ascii import US
 import streamlit as st
 import numpy as np 
 import pandas as pd 
+import seaborn as sns
 
 from PIL import Image
 # from sklearn.preprocessing import StandardScaler
@@ -97,10 +98,10 @@ with st.sidebar:
        st.image(im1)
        st.markdown("""---""")
        st.title('About this Webapp')
-       st.write('As the students performance is very important for any organisation or institute'
+       st.write('As the students performance is very important for any organisation or institute.'
        'Primarily this is webapp aims to determine the category of students in which they are lying and'
        ' gives intuitive feed back for their improvement. This helps to detect early'
-       ' raise and fall of students performance.')
+       'raise and fall of students performance.')
 
        st.markdown("""---""")
        
