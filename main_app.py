@@ -3,6 +3,7 @@ from curses.ascii import US
 import streamlit as st
 import numpy as np 
 import pandas as pd 
+import sklearn
 
 from PIL import Image
 # from sklearn.model_selection import train_test_split
