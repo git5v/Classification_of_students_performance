@@ -471,7 +471,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        disMed = val/cnt 
        st.write('Avarage Discussion of MEDIUM level students',val/cnt)
 
-       if(number3<disHigh):
+       if(number4<disHigh):
               st.title("Feedback")
               st.markdown('It seems that the student take very less paricipation in discussions' 
               'So **try to take participate more and more in discussion to get to know various interesting things**')
@@ -517,7 +517,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        viewL = val/cnt 
        st.write('Avarage Announcements View of MEDIUM level students',val/cnt)
 
-       if(number4<viewH):
+       if(number3<viewH):
               st.title("Feedback")
               st.markdown('It seems that the student is not much concerned about announcement that happens in universities' 
               'So **try to see the Announcements whenever get a chance so that you can not miss any oporituinites and updates**')
