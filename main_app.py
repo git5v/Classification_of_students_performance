@@ -517,7 +517,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        viewL = val/cnt 
        st.write('Avarage Announcements View of MEDIUM level students',val/cnt)
 
-       if(number3<viewH):
+       if(number4<viewH):
               st.title("Feedback")
               st.markdown('It seems that the student is not much concerned about announcement that happens in universities' 
               'So **try to see the Announcements whenever get a chance so that you can not miss any oporituinites and updates**')
