@@ -3,16 +3,16 @@ from curses.ascii import US
 import streamlit as st
 import numpy as np 
 import pandas as pd 
-import sklearn
+# import sklearn
 
 from PIL import Image
 # from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+# from sklearn.metrics import accuracy_score
 
 from sklearn.ensemble import RandomForestClassifier
 
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
+# from sklearn.metrics import classification_report
+# from sklearn.metrics import confusion_matrix
 
 string = "Classification Of Students Academic Performance"
 
@@ -47,6 +47,9 @@ st.set_page_config(page_title=string, page_icon='chart_with_upwards_trend',layou
               initial_sidebar_state="auto", menu_items=None)
 
 st.title (string, anchor=None)
+
+
+
 
 
 student = pd.read_csv("xAPI-Edu-Data.csv")
@@ -93,8 +96,12 @@ def shuffle_split_data(X, y):
 
 X_train,X_test,y_train,y_test = shuffle_split_data(X, y)
 
+#-------------------------------------------------------------
 
-from sklearn.ensemble import RandomForestClassifier
+
+#-------------------------------------------------------------
+
+
 
 rfc = RandomForestClassifier(n_estimators=80,max_features='auto', max_depth=9,min_samples_leaf=1,
                              min_samples_split=2,bootstrap=True, random_state = 42)
@@ -103,9 +110,9 @@ rfc.fit(X_train,y_train)
 rfcpred = rfc.predict(X_test)
 
 # print("Random Forest Classifier Accuracy Accuracy: ")
-Tunned_forest = accuracy_score(rfcpred,y_test) 
+# Tunned_forest = accuracy_score(rfcpred,y_test) 
 
-confusion_matrix(y_test, rfcpred)
+# confusion_matrix(y_test, rfcpred)
 
 
 
@@ -223,10 +230,11 @@ genre4 = st.radio(
 
 if genre4 == 'High School':
      st.markdown('**Student is  in higher school**')
-elif(genre3 == 'Middle School'):
+elif(genre4 == 'Middle School'):
      st.markdown('**Student is  in Middle school**')
 else:
        st.markdown('**Student is  in Lower level school**')
+
 st.markdown("""---""")
        
 genre5 = st.radio(
@@ -330,7 +338,6 @@ elif prediction[0]==1:
 else: st.success("The student is in MEDIUM level catagory")
 
 
-import seaborn as sns
 
 if st.button('Click if you wants to know hte analysis of studemnts'):
        st.title('Here the analysis of student')
@@ -373,8 +380,12 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        st.write('Avarage raise hands of MEDIIUM level students',val/cnt)
        
        if(number1<handRaiseOfHighStd):
+              st.title("Feedback")
               st.markdown('The student is not asking questions whenever your are having doubt by rasing hands' 
               'So **try to raise hands in class and get doubts clear right there**')
+       else: 
+          st.title("Feedback")
+          st.markdown('**You are doing good here just continue what you are doing**')
 
        st.markdown("""---""")
 
@@ -415,9 +426,13 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        st.write('Avarage Visited Rescources of MEDIUM level students',val/cnt)
 
        if(number2<visRecHigh):
+              st.title("Feedback")
               st.markdown('The student is not visiting the resources frequently ' 
               'So **try to utilize the resources and visit them frequently whenever you get a chance**')
-
+       else: 
+          st.title("Feedback")
+          st.markdown('**You are doing good here just continue what you are doing**')
+          
        st.markdown("""---""")
        
        st.bar_chart(student['Discussion'][:50:])
@@ -457,8 +472,12 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        st.write('Avarage Discussion of MEDIUM level students',val/cnt)
 
        if(number3<disHigh):
+              st.title("Feedback")
               st.markdown('It seems that the student take very less paricipation in discussions' 
               'So **try to take participate more and more in discussion to get to know various interesting things**')
+       else: 
+          st.title("Feedback")
+          st.markdown('**You are doing good here just continue what you are doing**')
 
        st.markdown("""---""")
 
@@ -499,8 +518,12 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        st.write('Avarage Announcements View of MEDIUM level students',val/cnt)
 
        if(number3<viewH):
+              st.title("Feedback")
               st.markdown('It seems that the student is not much concerned about announcement that happens in universities' 
               'So **try to see the Announcements whenever get a chance so that you can not miss any oporituinites and updates**')
+       else: 
+          st.title("Feedback")
+          st.markdown('**You are doing good here just continue what you are doing**')
 
        st.markdown("""---""")
 
