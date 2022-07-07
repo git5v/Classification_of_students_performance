@@ -105,6 +105,8 @@ with st.sidebar:
        
        st.markdown("**Connect wtih me 😊** [LINK](https://www.linkedin.com/in/vedant-mukhedkar-4864881b0/)")
        st.markdown("**My Github** [LINK](https://www.github.com/git5v)")
+       
+       st.markdown("""---""")
 
 
 
@@ -121,6 +123,7 @@ if genre1 == 'Female':
 else:
      st.image(male_img,  width = 250)
 
+st.markdown("""---""")
 
 genre2 = st.radio(
      'Please select the Nationality of student ',
@@ -157,6 +160,7 @@ elif(genre2 == 'lebanon'):
 elif(genre2 == 'venzuela'):
      st.image(venzuela_img,  width = 300)
 
+st.markdown("""---""")
 
 
 genre3 = st.radio(
@@ -193,6 +197,7 @@ elif(genre3 == 'lebanon'):
      st.image(lebanon_img,  width = 300)
 elif(genre3 == 'venzuela'):
      st.image(venzuela_img,  width = 300)
+st.markdown("""---""")
 
 genre4 = st.radio(
      'Please select the Stage of student ',
@@ -205,6 +210,7 @@ elif(genre3 == 'Middle School'):
      st.markdown('**Student is  in Middle school**')
 else:
        st.markdown('**Student is  in Lower level school**')
+st.markdown("""---""")
        
 genre5 = st.radio(
      'Please select the Semester of student ',
@@ -215,6 +221,7 @@ if genre5 == 'Fall':
      st.markdown('**Fall Semester**')
 else:
        st.markdown('**Spring Semester**')
+st.markdown("""---""")
 
 genre6 = st.radio(
      'Relation of Guardian',
@@ -225,39 +232,47 @@ if genre6 == 'Father':
      st.markdown('**Father**')
 else:
        st.markdown('**Mother**')
+st.markdown("""---""")
 
 
 number1 = st.number_input('Enter the total raise hands of student from 0 to 100')
 if(number1>100 or number1<0): st.write("Please enter the valid value")
 else : st.write('The current number is ', number1) 
+st.markdown("""---""")
 
 number2 = st.number_input('Enter how many times student visited resources from 0 to 100')
 if(number2>100 or number2<0): st.write("Please enter the valid value")
 else : st.write('The current number is ', number2) 
+st.markdown("""---""")
 
 number3 = st.number_input('Enter how many times the announcement is viewed by student from 0 to 100')
 if(number3>100 or number3<0): st.write("Please enter the valid value")
 else : st.write('The current number is ', number3) 
+st.markdown("""---""")
 
 number4 = st.number_input('Enter how many times student taken part in discussion from 0 to 100')
 if(number4>100 or number4<0): st.write("Please enter the valid value")
 else : st.write('The current number is ', number4) 
+st.markdown("""---""")
 
 
 option1 = st.selectbox(
      'Parent Answering Survey',
      ('No','Yes'))
 st.write('You selected:', option1)
+st.markdown("""---""")
 
 option2 = st.selectbox(
      'Parent School Satisfaction',
      ('Bad','Good'))
 st.write('You selected:', option2)
+st.markdown("""---""")
 
 option3 = st.selectbox(
      'Student Absent Days ',
      ('Above-7','Below-7'))
 st.write('You selected:', option3)
+st.markdown("""---""")
 
 Dict1 = {"Female": 0, "Male": 1}
 Dict2 = {'Egypt': 0, 'Iran': 1, 'Iraq': 2, 'Jordan': 3, 'KW': 4, 'Lybia': 5, 'Morocco': 6, 'Palestine': 7, 'SaudiArabia': 8, 'Syria': 9, 'Tunis': 10, 'USA': 11, 'lebanon': 12, 'venzuela': 13}
