@@ -136,7 +136,7 @@ with st.sidebar:
 
 st.image(im,  width = 600)
 st.markdown("""---""")
-st.markdown('**Please enter the below fields correctly**')
+st.title('**Please enter the below fields correctly**')
 
 genre1 = st.radio(
      ' Please select the gender of student ',
@@ -339,7 +339,7 @@ else: st.success("The student is in MEDIUM level catagory")
 
 
 
-if st.button('Click if you wants to know hte analysis of studemnts'):
+if st.button('Click if you wants to know the analysis of students'):
        st.title('Here the analysis of student')
 
        #Bar Chart
@@ -381,7 +381,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
        
        if(number1<handRaiseOfHighStd):
               st.title("Feedback")
-              st.markdown('The student is not asking questions whenever your are having doubt by rasing hands' 
+              st.markdown('The student is not asking questions whenever your are having doubt by rasing hands ' 
               'So **try to raise hands in class and get doubts clear right there**')
        else: 
           st.title("Feedback")
@@ -473,7 +473,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
 
        if(number4<disHigh):
               st.title("Feedback")
-              st.markdown('It seems that the student take very less paricipation in discussions' 
+              st.markdown('It seems that the student take very less paricipation in discussions ' 
               'So **try to take participate more and more in discussion to get to know various interesting things**')
        else: 
           st.title("Feedback")
@@ -519,7 +519,7 @@ if st.button('Click if you wants to know hte analysis of studemnts'):
 
        if(number3<viewH):
               st.title("Feedback")
-              st.markdown('It seems that the student is not much concerned about announcement that happens in universities' 
+              st.markdown('It seems that the student is not much concerned about announcement that happens in universities ' 
               'So **try to see the Announcements whenever get a chance so that you can not miss any oporituinites and updates**')
        else: 
           st.title("Feedback")
